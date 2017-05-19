@@ -1,0 +1,66 @@
+// Font
+// --------------------------------------------------
+
+gothic = -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif
+mincho = "Hiragino Mincho ProN", "Hiragino Mincho Pro", "游明朝", YuMincho, "ＭＳ 明朝", serif
+
+
+// Color
+// --------------------------------------------------
+
+black = #333
+
+// Size
+// --------------------------------------------------
+
+max-window-width = 1280px
+content-width = 1000px
+
+maxWidth(m = 0 auto)
+	max-width max-window-width
+	margin m
+
+contentWidth(m = 0 auto)
+	width content-width
+	margin m
+
+// Media query
+// --------------------------------------------------
+
+small-min  = 480px
+medium-min = 768px
+large-min  = 1024px
+
+xsmall-max = small-min - 1
+small-max  = medium-min - 1
+medium-max = large-min - 1
+
+media(point, direction = min)
+	if point == smallMin
+		@media print, screen and (min-width: small-min)
+			{block}
+	else if point == mediumMin
+		@media print, screen and (min-width: medium-min)
+			{block}
+	else if point == largeMin
+		@media print, screen and (min-width: large-min)
+			{block}
+	else if point == xsmallMax
+		@media print, screen and (max-width: xsmall-max)
+			{block}
+	else if point == smallMax
+		@media print, screen and (max-width: small-max)
+			{block}
+	else if point == smallMaxLand
+		@media print, screen and (max-width: small-max) and (orientation: landscape)
+			{block}
+	else if point == mediumMax
+		@media print, screen and (max-width: medium-max)
+			{block}
+	else
+		if direction == min
+			@media print, screen and (min-width: point)
+				{block}
+		else if direction == max
+			@media print, screen and (max-width: point)
+				{block}

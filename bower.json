@@ -1,0 +1,20 @@
+{
+  "name": "ftc",
+  "description": "ftc",
+  "main": "gulpfile.js",
+  "authors": [
+    "Ai Shimizu <a_shimizu@tam-tam.co.jp>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "^3.0.2"
+  }
+}
