@@ -33,6 +33,7 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       "windows.jQuery": 'jquery',
+      docReady: 'doc-ready',
       Masonry: 'masonry-layout'
     })
   ]
