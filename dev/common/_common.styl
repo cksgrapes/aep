@@ -1,0 +1,55 @@
+// Basis
+//------------------------------
+
+html
+  opacity 0
+  transition opacity 1s ease-in-out
+  &.wf-active
+    opacity 1
+
+body
+  background-color black
+
+// Masonry
+//------------------------------
+
+.cmn-MansorySizer
+.cmn-Masonry_Block
+  width 100vw
+  background-color white
+  border-bottom 2px solid black
+  +media(smallMin)
+    width 50%
+  +media(mediumMin)
+    width 33.3%
+  +media(largeMin)
+    width 25vw
+  +media(llargeMin)
+    width 20vw
+
+.cmn-Masonry_Post
+  font-size 1.3rem
+  line-height 1.9
+  .cmn-Masonry_Link
+    display block
+    padding 20px
+  +media(smallMin)
+    border-left 2px solid black
+    &:nth-of-type(2n+1)
+      border-left none
+  +media(mediumMin)
+    font-size 1.5rem
+    &:nth-of-type(2n+1)
+      border-left 2px solid black
+    &:nth-of-type(3n+1)
+      border-left none
+  +media(largeMin)
+    &:nth-of-type(3n+1)
+      border-left 2px solid black
+    &:nth-of-type(4n+1)
+      border-left none
+  +media(llargeMin)
+    &:nth-of-type(4n+1)
+      border-left 2px solid black
+    &:nth-of-type(5n+1)
+      border-left none
