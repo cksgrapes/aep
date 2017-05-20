@@ -101,6 +101,7 @@ gulp.task('js', function() {
   var webpackConfig = require('./webpack.config.js');
 
   gulp.src(src.js)
+    .pipe($.plumber({errorHandler: $.notify.onError("Error: <%= error.message %>")}))
     .pipe(webpackStream(webpackConfig,webpack))
     .pipe(gulp.dest(dest.js));
 });
