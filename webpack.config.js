@@ -34,6 +34,7 @@ module.exports = {
       jQuery: 'jquery',
       "windows.jQuery": 'jquery',
       docReady: 'doc-ready',
+      elResize: 'element-resize-event',
       Masonry: 'masonry-layout'
     })
   ]
