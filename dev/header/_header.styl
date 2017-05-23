@@ -1,0 +1,210 @@
+// Header
+//------------------------------
+
+.hd-Header
+  position relative
+  background-color black
+  color white
+  transition top .8s ease
+  .preFixedHeader &
+  .fixedHeader &
+    position fixed
+    top -80px
+    left 0
+    width 100%
+    z-index 100
+    transition top .8s ease
+  .fixedHeader &
+    top 0
+  +media(largeMin)
+    .preFixedHeader &
+    .fixedHeader &
+      top -100px
+    .fixedHeader &
+      top 0
+
+// Logo
+//------------------------------
+
+.hd-Logo
+  position absolute
+  top 0
+  left 0
+  font-family mincho
+  font-weight normal
+  a
+    display block
+    padding 8px 15px 11px
+    line-height 1
+  +media(largeMin)
+    a
+      padding 13px 20px 16px
+      color text-gray
+      transition color .3s ease-out
+      &:hover
+        color white
+
+// Search
+//------------------------------
+
+.hd-Search_Button
+  position absolute
+  top 0
+  right 48px
+  width @right
+  height 40px
+  padding 12px 0 11px
+  border-left 1px solid border-gray
+  font-size 17px
+  text-align center
+  cursor pointer
+  transition all .2s ease-out
+  span
+    display none
+  +media(largeMin)
+    right 58px
+    width @right
+    height 50px
+    padding 15px 0
+    font-size 20px
+    color text-gray
+    transition color .3s ease-out
+    &:hover
+      color white
+
+.hd-Search_Input
+  display none
+  transform translate(0,40px)
+  overflow hidden
+  border-top 1px solid border-gray
+  text-align right
+  input
+    width 100%
+    padding 15px 20px
+    font-size 1.4rem
+    color white
+  +media(mediumMin)
+    input
+      text-align right
+  +media(largeMin)
+    transform translate(0,50px)
+
+
+// Gloval Navigation
+//------------------------------
+
+.hd-GlobalNav
+  min-height 40px
+  +media(largeMin)
+    min-height 50px
+
+.hd-GlobalNav_Heading
+  @extend .hd-Search_Button
+  right 0
+  padding 14px 0
+  font-size 12px
+  +media(largeMin)
+    right 0
+    padding 18px 0 17px
+    font-size 15px
+
+.hd-GlobalNav_FirstLevel
+  transform translate(0,40px)
+  overflow hidden
+  display none
+  padding-bottom 40px
+  text-transform lowercase
+  font-family mincho
+  letter-spacing .05em
+  font-size 1.3rem
+  >li
+    border-top 1px solid border-gray
+    list-style none
+    >a
+      display block
+      padding 15px 20px
+  +media(mediumMin)
+    padding-right 10px
+    border-top 1px solid border-gray
+    text-align right
+    *
+      vertical-align middle
+      white-space nowrap
+    >li
+      display inline-block
+      border-top none
+      >a
+        display inherit
+        padding 11px 10px
+  +media(largeMin)
+    transform translate(0,50px)
+    padding-bottom 50px
+    >li
+      >a
+        padding 16px 10px
+        color text-gray
+        transition color .3s ease-out
+        &:hover
+          color white
+
+.hd-GlobalNav_SecondLevel
+  overflow hidden
+  display flex
+  padding 0 10px
+  flex-wrap wrap
+  background-color #191919
+  height 0
+  transition height .4s ease-in-out
+  .opened &
+    height 50px
+  >li
+    list-style none
+    width auto
+    >a
+      display block
+      padding 15px 10px
+  +media(mediumMin)
+    display inline-block
+    border-top none
+    height auto
+    >li
+      display inherit
+      >a
+        display inherit
+        padding 11px 10px
+  +media(largeMin)
+    >li
+      >a
+        padding 16px 10px
+        color text-gray
+        transition color .3s ease-out
+        &:hover
+          color white
+
+.hd-GlobalNav_Toggle
+  overflow hidden
+  >a
+    &::after
+      content: "\0025be"
+      font-size 1.2rem
+      margin-left .5em
+      color text-gray
+  +media(mediumMin)
+    >a
+      &::after
+        content: "\0000bb"
+        font-size 1.3rem
+
+.hd-GlobalNav_Toggle-works
+  +media(mediumMin)
+    width 68px
+    transition width .4s ease-in-out
+    &.opened
+      width 351px
+
+.hd-GlobalNav_Toggle-blog
+  +media(mediumMin)
+    width 59px
+    transition width .4s ease-in-out
+    &.opened
+      width 305px
