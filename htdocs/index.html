@@ -36,12 +36,46 @@
 </head>
 <body>
 
+<header class="hd-Header">
+<h1 class="hd-Logo"><a href="/">äp</a></h1>
+<form class="hd-Search">
+<label for="cmnSearchInput" class="hd-Search_Button"><i class="icon-search"></i><span>検索フォーム</span></label>
+<p class="hd-Search_Input"><input type="text" name="s" id="cmnSearchInput" placeholder="サイト内検索"></p>
+</form>
+<nav class="hd-GlobalNav">
+<h2 class="hd-GlobalNav_Heading"><i class="icon-menu"></i><span>サイトメニュー</span></h2>
+<ul class="hd-GlobalNav_FirstLevel">
+<li><a href="/introduction/">Introduction</a></li>
+<li class="hd-GlobalNav_Toggle hd-GlobalNav_Toggle-works">
+<a href="#">Works</a>
+<ul class="hd-GlobalNav_SecondLevel">
+<li><a href="">All</a></li>
+<li><a href="">Photo</a></li>
+<li><a href="">Poem</a></li>
+<li><a href="">Music</a></li>
+<li><a href="">App</a></li>
+</ul>
+</li>
+<li class="hd-GlobalNav_Toggle hd-GlobalNav_Toggle-blog">
+<a href="#">Blog</a>
+<ul class="hd-GlobalNav_SecondLevel">
+<li><a href="">All</a></li>
+<li><a href="">Memo</a></li>
+<li><a href="">Scrap</a></li>
+<li><a href="">Journal</a></li>
+</ul>
+</li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+</nav>
+</header>
+
 <div class="cmn-Masonry">
 
 <div class="cmn-MansorySizer"></div>
 
 <div class="cmn-Masonry_Block home-LogoBlock">
-<h1 class="home-Logo">äp</h1>
+<p class="home-Logo">äp</p>
 <!-- /.cmn-Masonry_Block --></div>
 
 <div class="cmn-Masonry_Block home-AboutBlock">
@@ -51,77 +85,80 @@
 </a>
 <!-- /.cmn-Masonry_Block --></div>
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">font-weightを設定するための3つの方法論</h2>
 <p>なんということだろう。もはやそれは夢ではなかった。あまりにもリアリティのあふれる悪夢だった。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">蟷螂は夜あるく</h2>
 <p>すまないが、ちょっと長めの記事を書いてもらえるだろうか。意味はなくて構わない。どのみち僕しか読まないものだ。張り合いがなくてやる気に支障があるかもしれないが、そこは僕ときみの中というところを雨粒ほど考慮してもらえればありがたい。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">行き止まり</h2>
+<p>たちどころに意味をなさなくなってしまう。もう終わりだ。</p>
+</a>
+<!-- /.cmn-Masonry_Block --></section>
+
+
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-scrap">
+<h2 class="cmn-Post_Heading">山月記</h2>
+<a href="http://www.aozora.gr.jp/cards/000119/files/624_14544.html" class="cmn-Post_Link" target="_blank">
+<blockquote cite="http://www.aozora.gr.jp/cards/000119/files/624_14544.html">
+<p>己の毛皮の濡れたのは、夜露のためばかりではない。</p>
+<cite>『山月記』中島敦</cite>
+</blockquote>
+</a>
+<!-- /.cmn-Masonry_Block --></section>
+
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">無題</h2>
 <p>なんということだろう。もはやそれは夢ではなかった。あまりにもリアリティのあふれる悪夢だった。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">無題</h2>
 <p>すまないが、ちょっと長めの記事を書いてもらえるだろうか。意味はなくて構わない。どのみち僕しか読まないものだ。張り合いがなくてやる気に支障があるかもしれないが、そこは僕ときみの中というところを雨粒ほど考慮してもらえればありがたい。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">無題</h2>
 <p>なんということだろう。もはやそれは夢ではなかった。あまりにもリアリティのあふれる悪夢だった。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">無題</h2>
 <p>すまないが、ちょっと長めの記事を書いてもらえるだろうか。意味はなくて構わない。どのみち僕しか読まないものだ。張り合いがなくてやる気に支障があるかもしれないが、そこは僕ときみの中というところを雨粒ほど考慮してもらえればありがたい。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">無題</h2>
 <p>なんということだろう。もはやそれは夢ではなかった。あまりにもリアリティのあふれる悪夢だった。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
 
 
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
-<p>すまないが、ちょっと長めの記事を書いてもらえるだろうか。意味はなくて構わない。どのみち僕しか読まないものだ。張り合いがなくてやる気に支障があるかもしれないが、そこは僕ときみの中というところを雨粒ほど考慮してもらえればありがたい。</p>
-</a>
-<!-- /.cmn-Masonry_Block --></section>
-
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
-<p>なんということだろう。もはやそれは夢ではなかった。あまりにもリアリティのあふれる悪夢だった。</p>
-</a>
-<!-- /.cmn-Masonry_Block --></section>
-
-
-<section class="cmn-Masonry_Block cmn-Masonry_Post cmn-Masonry_Post-note">
-<a href="/introduction/" class="cmn-Masonry_Link">
-<h2>無題</h2>
+<section class="cmn-Masonry_Block cmn-Post cmn-Post-note">
+<a href="/introduction/" class="cmn-Post_Link">
+<h2 class="cmn-Post_Heading">無題</h2>
 <p>すまないが、ちょっと長めの記事を書いてもらえるだろうか。意味はなくて構わない。どのみち僕しか読まないものだ。張り合いがなくてやる気に支障があるかもしれないが、そこは僕ときみの中というところを雨粒ほど考慮してもらえればありがたい。</p>
 </a>
 <!-- /.cmn-Masonry_Block --></section>
