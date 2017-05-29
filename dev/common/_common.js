@@ -11,8 +11,8 @@ module.exports.setMasonry = () => {
   docReady(()=>{
     cmnMasonry = new Masonry('.cmn-Masonry',{
       itemSelector: '.cmn-Masonry_Block',
-      columnWidth: '.cmn-MansorySizer',
-      // gutter: '.cmn-GutterSizer',
+      columnWidth: '.cmn-MasonrySizer',
+      gutter: '.cmn-GutterSizer',
       percentPosition: true,
       horizontalOrder: true,
       transitionDuration: '0.2s',

@@ -37,32 +37,36 @@
 <body>
 
 <header class="hd-Header">
+<% if (page.id == 'home') { -%>
 <h1 class="hd-Logo"><a href="/">äp</a></h1>
+<% } else { -%>
+<p class="hd-Logo"><a href="/">äp</a></p>
+<% } -%>
 <form class="hd-Search">
 <label for="cmnSearchInput" class="hd-Search_Button"><i class="icon-search"></i><span>検索フォーム</span></label>
 <p class="hd-Search_Input"><input type="text" name="s" id="cmnSearchInput" placeholder="サイト内検索"></p>
 </form>
 <nav class="hd-GlobalNav">
-<h2 class="hd-GlobalNav_Heading"><i class="icon-menu"></i><span>サイトメニュー</span></h2>
+<p class="hd-GlobalNav_Heading"><i class="icon-menu"></i><span>サイトメニュー</span></p>
 <ul class="hd-GlobalNav_FirstLevel">
 <li><a href="/introduction/">Introduction</a></li>
 <li class="hd-GlobalNav_Toggle hd-GlobalNav_Toggle-works">
 <a href="#">Works</a>
 <ul class="hd-GlobalNav_SecondLevel">
-<li><a href="">All</a></li>
-<li><a href="">Photo</a></li>
-<li><a href="">Poem</a></li>
-<li><a href="">Music</a></li>
-<li><a href="">App</a></li>
+<li><a href="/works/">All</a></li>
+<li><a href="/works/poem/">Poem</a></li>
+<li><a href="/works/photo/">Photo</a></li>
+<!-- <li><a href="">Songs</a></li> -->
+<!-- <li><a href="">App</a></li> -->
 </ul>
 </li>
 <li class="hd-GlobalNav_Toggle hd-GlobalNav_Toggle-blog">
 <a href="#">Blog</a>
 <ul class="hd-GlobalNav_SecondLevel">
-<li><a href="">All</a></li>
-<li><a href="">Memo</a></li>
-<li><a href="">Scrap</a></li>
-<li><a href="">Journal</a></li>
+<li><a href="/blog/">All</a></li>
+<li><a href="/blog/technique/">Technique</a></li>
+<li><a href="/blog/journal/">Journal</a></li>
+<!-- <li><a href="">Scrap</a></li> -->
 </ul>
 </li>
 <li><a href="/contact/">Contact</a></li>
