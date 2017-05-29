@@ -51,32 +51,32 @@ module.exports.setGlobalNav = () => {
   const navSecondLevel = new ToggleClass('.hd-GlobalNav_Toggle');
   navSecondLevel.setToggle();
 
-  const isUnderWidth = (size) => {
-    return ( window.innerWidth < size) ? true : false;
-  };
+  // const isUnderWidth = (size) => {
+  //   return ( window.innerWidth < size) ? true : false;
+  // };
 
-  const pageHeight = () => {
-    return Math.max.apply( null, [document.body.clientHeight , document.body.scrollHeight, document.documentElement.scrollHeight, document.documentElement.clientHeight] );
-  }
+  // const pageHeight = () => {
+  //   return Math.max.apply( null, [document.body.clientHeight , document.body.scrollHeight, document.documentElement.scrollHeight, document.documentElement.clientHeight] );
+  // }
 
-  const fixedHeader = () => {
-    const _$body = $('body'),
-          _scroll =  window.pageYOffset,
-          _headerHeight = (isUnderWidth(768)) ? 40 : 50,
-          _preHeight = _headerHeight * 3;
-    if (_scroll > _headerHeight && _scroll < _preHeight) {
-      _$body.addClass('preFixedHeader');
-    } else {
-      _$body.removeClass('preFixedHeader');
-    }
-    if (_scroll > _preHeight) {
-      _$body.addClass('fixedHeader');
-    } else {
-      _$body.removeClass('fixedHeader');
-    }
-  }
+  // const fixedHeader = () => {
+  //   const _$body = $('body'),
+  //         _scroll =  window.pageYOffset,
+  //         _headerHeight = (isUnderWidth(768)) ? 40 : 50,
+  //         _preHeight = _headerHeight * 3;
+  //   if (_scroll > _headerHeight && _scroll < _preHeight) {
+  //     _$body.addClass('preFixedHeader');
+  //   } else {
+  //     _$body.removeClass('preFixedHeader');
+  //   }
+  //   if (_scroll > _preHeight) {
+  //     _$body.addClass('fixedHeader');
+  //   } else {
+  //     _$body.removeClass('fixedHeader');
+  //   }
+  // }
 
-  window.addEventListener('scroll', () => {
-    fixedHeader();
-  });
+  // window.addEventListener('scroll', () => {
+  //   fixedHeader();
+  // });
 };
