@@ -1,25 +1,33 @@
 // Logo
 //------------------------------
 .home-Logo
+  padding 50px 0
   font-family mincho
   font-size 7rem
   font-weight normal
+  height 100%
+  text-align center
+  img
+    width auto
+    height 100%
+  +media(largeMin)
+    padding 80px 0
 
 .home-LogoBlock
-  min-height 70.566727605vw
+  height 70.566727605vw
   display flex
   justify-content center
   align-items center
   +media(smallMin)
-    min-height 35.071707953vw
+    height 35.071707953vw
   +media(mediumMin)
-    min-height 23.391215526vw
+    height 23.391215526vw
   +media(largeMin)
     width 50vw
-    min-height 35.869565217vw
+    height 35.869565217vw
   +media(llargeMin)
     width 40vw
-    min-height 28.084415584vw
+    height 28.084415584vw
 
 .home-AboutBlock
   overflow hidden
@@ -43,7 +51,7 @@
     z-index 1
     transform scale(1.2)
     transition -webkit-filter .5s ease-out
-    transition filter .5s ease-out
+    transition filter .5s ease
     filter blur(8px) contrast(150%) grayscale(100%)
   &::after
     background-color rgba(10,10,10,.4)
