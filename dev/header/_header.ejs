@@ -38,16 +38,19 @@
 
 <header class="hd-Header">
 <% if (page.id == 'home') { -%>
-<h1 class="hd-Logo"><a href="/">äp</a></h1>
+<h1 class="hd-Logo"><a href="/">alter ego production</a></h1>
 <% } else { -%>
-<p class="hd-Logo"><a href="/">äp</a></p>
+<p class="hd-Logo"><a href="/">alter ego production</a></p>
 <% } -%>
 <form class="hd-Search">
 <label for="cmnSearchInput" class="hd-Search_Button"><i class="icon-search"></i><span>検索フォーム</span></label>
+<div class="hd-Search_Inner">
 <p class="hd-Search_Input"><input type="text" name="s" id="cmnSearchInput" placeholder="サイト内検索"></p>
+</div>
 </form>
 <nav class="hd-GlobalNav">
 <p class="hd-GlobalNav_Heading"><i class="icon-menu"></i><span>サイトメニュー</span></p>
+<div class="hd-GlobalNav_Inner">
 <ul class="hd-GlobalNav_FirstLevel">
 <li><a href="/introduction/">Introduction</a></li>
 <li class="hd-GlobalNav_Toggle hd-GlobalNav_Toggle-works">
@@ -71,5 +74,6 @@
 </li>
 <li><a href="/contact/">Contact</a></li>
 </ul>
+</div>
 </nav>
 </header>

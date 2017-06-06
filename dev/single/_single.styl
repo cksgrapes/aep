@@ -24,19 +24,16 @@
 // Journal
 //------------------------------
 
-.sg-JournalWrap
+.sg-Journal
   margin 30px
   padding 25px
   background-color #eee
-  +media(mediumMin)
-    padding 50px
-
-.sg-Journal
   +media(smallMin)
     display flex
+  +media(mediumMin)
+    padding 50px
   +media(largeMin)
-    max-width 970px
-    margin 0 auto
+    margin 50px
 
 .sg-Journal_Side
   margin-bottom 30px
@@ -52,3 +49,80 @@
   +media(mediumMin)
     font-size 1.4rem
 
+// Poem
+//------------------------------
+
+.sg-Poem
+  margin 30px
+  padding 30px
+  background-color #eee
+  font-size 1.3rem
+  line-height 2
+  +media(mediumMin)
+    padding 50px
+  +media(largeMin)
+    margin 50px
+    padding 100px
+
+.sg-Poem .sg-Data
+  margin-top 50px
+
+// Visual Poem
+//------------------------------
+
+.sg-VisualPoem
+  margin 30px
+  background-color #eee
+  font-size 1.3rem
+  line-height 2
+  +media(smallMin)
+    display flex
+  +media(largeMin)
+    margin 50px
+
+.sg-VisualPoem_Picture
+  background-color black
+  img
+    width 100%
+    height auto
+  +media(smallMin)
+    width 62%
+
+.sg-VisualPoem_Text
+  padding 30px
+  +media(smallMin)
+    width 38%
+    padding 50px
+
+.sg-VisualPoem .sg-Data
+  margin-top 50px
+
+// Photo
+//------------------------------
+
+.sg-Photo
+  margin 30px
+  font-size 1.3rem
+  line-height 2
+  color white
+  +media(smallMin)
+    display flex
+  +media(largeMin)
+    margin 50px
+
+.sg-Photo_Picture
+  img
+    width 100%
+    height auto
+  +media(smallMin)
+    width 62%
+
+.sg-Photo_Text
+  padding 30px 0
+  +media(smallMin)
+    width 38%
+    padding 0 50px
+
+.sg-Photo .sg-Data
+  margin-top 30px
+  border-color border-gray

@@ -7,6 +7,7 @@
   color white
   transition top .8s ease
   border-bottom 1px solid border-gray
+  z-index 100
   .preFixedHeader &
   .fixedHeader &
     position fixed
@@ -33,14 +34,15 @@
   left 0
   font-family mincho
   font-weight normal
-  font-size 2.2rem
+  font-size 1.5rem
   a
     display block
-    padding 8px 15px 11px
+    padding 13px 15px 12px
     line-height 1
   +media(largeMin)
+    font-size 1.7rem
     a
-      padding 13px 20px 16px
+      padding 18px 20px 15px
       color text-gray
       transition color .3s ease-out
       &:hover
@@ -74,11 +76,19 @@
     &:hover
       color white
 
-.hd-Search_Input
-  display none
-  transform translate(0,40px)
+.hd-Search_Inner
   overflow hidden
   border-top 1px solid border-gray
+  transform translate(0,41px)
+  height 0
+  transition all .2s ease-out
+  .opened + &
+    height 50px
+  +media(largeMin)
+    transform translate(0,51px)
+
+.hd-Search_Input
+  overflow hidden
   text-align right
   input
     width 100%
@@ -88,8 +98,6 @@
   +media(mediumMin)
     input
       text-align right
-  +media(largeMin)
-    transform translate(0,50px)
 
 
 // Gloval Navigation
@@ -110,11 +118,19 @@
     padding 18px 0 17px
     font-size 15px
 
-.hd-GlobalNav_FirstLevel
-  transform translate(0,40px)
-  overflow hidden
+.hd-GlobalNav_Inner
   display none
-  padding-bottom 40px
+  overflow hidden
+  transform translate(0,40px)
+  background-color black
+  margin-bottom 40px
+  +media(largeMin)
+    transform translate(0,50px)
+    border-bottom 1px solid border-gray
+    margin-bottom 50px
+
+.hd-GlobalNav_FirstLevel
+  // padding-bottom 40px
   text-transform lowercase
   font-family mincho
   letter-spacing .05em
@@ -127,7 +143,6 @@
       padding 15px 20px
   +media(mediumMin)
     padding-right 10px
-    border-top 1px solid border-gray
     text-align right
     *
       vertical-align middle
@@ -139,8 +154,8 @@
         display inherit
         padding 11px 10px
   +media(largeMin)
-    transform translate(0,50px)
-    padding-bottom 50px
+    border-top 1px solid border-gray
+    // padding-bottom 50px
     >li
       >a
         padding 16px 10px

@@ -20,45 +20,59 @@ body
 // Masonry
 //------------------------------
 
+gutter-ss = 9.375vw
+gutter-s  = 6.25vw
+gutter-m  = 3.90625vw
+gutter-l  = 3.06122449vw
+gutter-ll = 2.5vw
+
 .cmn-MasonryWrap
-  padding 0 9.375vw
+  overflow hidden
+  margin-top gutter-ss * -1
+  margin-bottom 80px
+  padding 0 gutter-ss
   +media(smallMin)
-    padding 0 6.25vw
+    margin-top gutter-s * -1
+    padding 0 gutter-s
   +media(mediumMin)
-    padding 0 3.90625vw
+    margin-top gutter-m * -1
+    padding 0 gutter-m
   +media(largeMin)
-    padding 0 3.06122449vw
+    margin-top gutter-l * -1
+    margin-bottom 100px
+    padding 0 gutter-l
   +media(llargeMin)
-    padding 0 2.5vw
+    margin-top gutter-ll * -1
+    padding 0 gutter-ll
 
 .cmn-MasonrySizer
 .cmn-Masonry_Block
   width 100%
   background-color white
-  margin-bottom 9.375vw
+  margin-top gutter-ss
   +media(smallMin)
-    margin-bottom 6.25vw
+    margin-top gutter-s
     width 40.475vw
   +media(mediumMin)
-    margin-bottom 3.90625vw
+    margin-top gutter-m
     width 44.140625vw
   +media(largeMin)
-    margin-bottom 3.06122449vw
+    margin-top gutter-l
     width 29.25170068vw
   +media(llargeMin)
-    margin-bottom 2.5vw
+    margin-top gutter-ll
     width 21.375vw
 
 .cmn-GutterSizer
   width 0
   +media(smallMin)
-    width 6.25vw
+    width gutter-s
   +media(mediumMin)
-    width 3.90625vw
+    width gutter-m
   +media(largeMin)
-    width 3.06122449vw
+    width gutter-l
   +media(llargeMin)
-    width 0 2.5vw
+    width gutter-ll
 
 // Post
 //------------------------------
@@ -112,3 +126,121 @@ body
     margin -2.551020408vw -2.551020408vw 2.551020408vw
   +media(llargeMin)
     margin -2.083333333vw -2.083333333vw 2.083333333vw
+
+// Controller
+//------------------------------
+
+.cmn-Controller
+  position fixed
+  bottom 0
+  left 0
+  width 100%
+  height 40px
+  border-top 1px solid border-gray
+  color white
+  background-color black
+  z-index 100
+  +media(largeMin)
+    height 50px
+
+.cmn-Pager
+  position relative
+  text-align center
+  font-size 1.2rem
+  +media(largeMin)
+    font-size 1.3rem
+
+.cmn-Pager_Item
+  display inline-block
+  padding 12px 15px
+  vertical-align middle
+  +media(largeMin)
+    padding 16px 20px
+
+.cmn-Pager_Item-current
+  font-weight bold
+  font-size 1.3rem
+  +media(largeMin)
+    font-size 1.4rem
+
+.cmn-Pager_Item-prev
+.cmn-Pager_Item-next
+  position absolute
+  top 0
+  padding 12px 14px
+  font-size 15px
+  +media(mediumMin)
+    padding 15px 18px
+    font-size 20px
+
+.cmn-Pager_Item-prev
+  left 0
+  border-right 1px solid border-gray
+
+.cmn-Pager_Item-next
+  right 0
+  border-left 1px solid border-gray
+
+// Page Navigation
+//------------------------------
+
+.cmn-PageNavigation
+  overflow hidden
+  margin 30px 30px 0
+  +media(largeMin)
+    margin 50px 50px 0
+
+.cmn-PageNavigation_Prev
+.cmn-PageNavigation_Next
+  position relative
+  display flex
+  align-items center
+  line-height 2
+  font-size 1.3rem
+  color white
+  &::before
+    content ""
+    display block
+    position absolute
+    top 0
+    width 50px
+    height 100%
+    border 1px solid border-gray
+  &::after
+    position absolute
+    top 50%
+    font-size 2rem
+    @extend [class^="icon-"]
+    content "\e408"
+  +media(mediumMin)
+    width 38%
+    min-height 150px
+  +media(largeMin)
+    color gray
+    transition color .3s ease-out
+    &:hover
+      color white
+
+.cmn-PageNavigation_Prev
+  padding 12px 20px 12px 70px
+  &::before
+    left 0
+  &::after
+    left 15px
+    transform translate(0,-50%)
+  +media(mediumMin)
+    float left
+    padding 0 20px 0 70px
+
+.cmn-PageNavigation_Next
+  margin-top 30px
+  padding 12px 70px 12px 20px
+  &::before
+    right 0
+  &::after
+    right 15px
+    transform translate(0,-50%) scale(-1,1)
+  +media(mediumMin)
+    float right
+    margin-top 0
+    padding 0 70px 0 20px

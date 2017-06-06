@@ -15,10 +15,10 @@ module.exports.setGlobalNav = () => {
         const $next = $this.next();
         if ($this.hasClass(_openedCls)) {
           $this.removeClass(_openedCls);
-          $next.slideUp();
+          $next.slideUp(300);
         } else {
           $this.addClass(_openedCls);
-          $next.slideDown();
+          $next.slideDown(300);
         }
       });
     }
@@ -42,7 +42,7 @@ module.exports.setGlobalNav = () => {
     }
   }
 
-  const search = new ToggleDisplay('.hd-Search_Button');
+  const search = new ToggleClass('.hd-Search_Button');
   search.setToggle();
 
   const navFirstLevel = new ToggleDisplay('.hd-GlobalNav_Heading');
