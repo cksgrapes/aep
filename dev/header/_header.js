@@ -15,10 +15,10 @@ module.exports.setGlobalNav = () => {
         const $next = $this.next();
         if ($this.hasClass(_openedCls)) {
           $this.removeClass(_openedCls);
-          $next.slideUp(300);
+          $next.slideUp(200);
         } else {
           $this.addClass(_openedCls);
-          $next.slideDown(300);
+          $next.slideDown(200);
         }
       });
     }

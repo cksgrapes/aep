@@ -2,6 +2,7 @@
 //------------------------------
 module.exports.setMasonry = () => {
   'use strict';
+  console.log((document.getElementsByClassName('cmn-Masonry') == false));
   let cmnMasonry;
   const triggerMasonry = () => {
     if ( !cmnMasonry ) { return; }
