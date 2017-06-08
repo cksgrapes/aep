@@ -5,9 +5,12 @@ module.exports.setMasonry = () => {
   let cmnMasonry;
   const triggerMasonry = () => {
     if ( !cmnMasonry ) { return; }
-    cmnMasonry.layout();
+    imagesLoaded( document.querySelector('main'), function() {
+      cmnMasonry.layout();
+    });
   };
   docReady(()=>{
+    if ($('.cmn-Masonry').length < 1) { return; }
     cmnMasonry = new Masonry('.cmn-Masonry',{
       itemSelector: '.cmn-Masonry_Block',
       columnWidth: '.cmn-MasonrySizer',

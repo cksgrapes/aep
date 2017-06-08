@@ -36,7 +36,7 @@ module.exports = {
       docReady: 'doc-ready',
       elResize: 'element-resize-event',
       Masonry: 'masonry-layout',
-      pjax: 'jquery-pjax'
+      imagesLoaded: 'imagesloaded'
     })
   ]
 };
