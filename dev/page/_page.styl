@@ -1,0 +1,50 @@
+// Page common
+//------------------------------
+
+.pg-Heading
+  margin 50px 0
+  text-align center
+  color white
+  text-transform lowercase
+  font-family mincho
+  font-weight normal
+  font-size 3rem
+  span
+    margin-top 1em
+    display block
+    font-family gothic
+    font-size 1.2rem
+    letter-spacing .1em
+
+.pg-Main
+  margin 30px
+  padding 25px
+  background-color #eee
+  font-size 1.3rem
+  line-height 2
+  +media(mediumMin)
+    font-size 1.4rem
+    padding 50px
+  +media(largeMin)
+    margin 50px
+
+.pg-Wysiwyg
+  p
+    margin 1.5em 0
+  h2
+    margin 2em 0 1em
+    padding-top .5em
+    border-top 1px solid #ddd
+    font-size 2rem
+    font-weight normal
+    line-height 1.7
+  ul
+  ol
+    margin 1.5em 0 1.5em 2em
+  p
+  h2
+    &:first-child
+      margin-top 0
+  +media(largeMin)
+    h2
+      font-size 2.2rem
