@@ -3,7 +3,7 @@
 
 html
   opacity 0
-  transition opacity 1s ease-in-out
+  // transition opacity 1s ease-in-out
   &.wf-active
     opacity 1
 
@@ -140,6 +140,11 @@ gutter-ll = 2.5vw
   z-index 100
   +media(largeMin)
     height 50px
+    a
+      color text-gray
+      transition color .3s ease-out
+      &:hover
+        color white
 
 .cmn-Pager
   position relative

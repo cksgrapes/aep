@@ -35,7 +35,8 @@ module.exports = {
       "windows.jQuery": 'jquery',
       docReady: 'doc-ready',
       elResize: 'element-resize-event',
-      Masonry: 'masonry-layout'
+      Masonry: 'masonry-layout',
+      pjax: 'jquery-pjax'
     })
   ]
 };
