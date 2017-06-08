@@ -10,15 +10,16 @@ module.exports.setGlobalNav = () => {
     }
     setToggle() {
       const _openedCls = this._openedCls;
-      $(this._element).off().on('click',function(){
+      $(this._element).off().on('click',function(event){
+        event.preventDefault();
         const $this = $(this);
         const $next = $this.next();
         if ($this.hasClass(_openedCls)) {
           $this.removeClass(_openedCls);
-          $next.slideUp(200);
+          $next.slideUp(300);
         } else {
           $this.addClass(_openedCls);
-          $next.slideDown(200);
+          $next.slideDown(300);
         }
       });
     }
@@ -30,7 +31,8 @@ module.exports.setGlobalNav = () => {
     }
     setToggle() {
       const _openedCls = this._openedCls;
-      $(this._element).off().on('click',function(){
+      $(this._element).off().on('click',function(event){
+        event.preventDefault();
         const $this = $(this);
         if ($this.hasClass(_openedCls)) {
           $this.removeClass(_openedCls);

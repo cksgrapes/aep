@@ -1,9 +1,11 @@
 import picturefill from 'picturefill';
 import common from './common/_common';
 import header from './header/_header';
-import pjax from 'jquery-pjax';
+import footer from './footer/_footer';
 
-common.setMasonry();
 common.setAnchor();
+common.setMasonry();
 
 header.setGlobalNav();
+
+footer.setPagetop();
